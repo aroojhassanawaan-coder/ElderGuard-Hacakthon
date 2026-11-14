@@ -1,0 +1,8 @@
+{
+  "name": "ElderGuard AI",
+  "description": "Cybersecurity assistant protecting adults aged 50+ from phishing, WhatsApp scams, lottery fraud, and tech support scams.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

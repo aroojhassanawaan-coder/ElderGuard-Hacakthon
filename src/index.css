@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: "Plus Jakarta Sans", "Atkinson Hyperlegible", system-ui, sans-serif;
+    --font-body: "Atkinson Hyperlegible", system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    font-family: var(--font-body);
+    font-size: 18px;
+    background-color: #EEF2F5;
+    color: #10243E;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #EEF2F5;
+    color: #10243E;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: var(--font-display);
+    color: #10243E;
+  }
+
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    &:focus-visible {
+      outline: 4px solid #1E40AF;
+      outline-offset: 3px;
+    }
+  }
+}
+
+.tactile-press {
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.tactile-press:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
